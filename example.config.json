@@ -1,0 +1,21 @@
+{
+  "model": {
+    "id": "your-model-id",
+    "baseUrl": "https://api.openai.com/v1",
+    "contextWindow": 32768,
+    "maxTokens": 2048
+  },
+  "apiKeyEnv": "OPENAI_API_KEY",
+  "systemPrompt": "Complete the user task with the available tools. Preserve facts, inspect results and report failures accurately.",
+  "maxTools": 8,
+  "limits": {
+    "modelCalls": 16,
+    "toolCalls": 64,
+    "tokens": 120000,
+    "seconds": 300
+  },
+  "context": {
+    "maxInputTokens": 20000,
+    "keepRecentExchanges": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model": "openai/gpt-6-sol",
+  "apiKeyEnv": "OPENAI_API_KEY",
+  "thinkingLevel": "medium",
+  "policy": { "profile": "workspace" },
+  "settings": { "theme": "redmaple", "quietStartup": "header" },
+  "maxOutputTokens": 4096,
+  "limits": { "modelCalls": 24, "toolCalls": 96, "tokens": 180000, "seconds": 600 },
+  "roles": {
+    "researcher": { "instructions": "调查问题，记录事实、来源与不确定性。", "tools": ["read", "grep", "find", "ls"] },
+    "implementer": { "instructions": "执行任务并验证结果。遵守工作区约束与人工批准。" },
+    "reviewer": { "instructions": "核查实现与任务要求，报告具体问题和核查依据。", "tools": ["read", "grep", "find", "ls"] }
+  }
+}

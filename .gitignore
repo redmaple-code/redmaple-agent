@@ -1,0 +1,14 @@
+node_modules/
+.agent-base/
+.redmaple/
+.env
+.env.*
+!.env.example
+.npmrc
+auth.json
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+coverage/

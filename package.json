@@ -1,0 +1,53 @@
+{
+  "name": "@paperpilot/agent-base",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Red Maple full Pi agent foundation with TUI, durable controls and extensible workflows",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./tools": "./src/workspace-tools.js",
+    "./pi": "./src/pi-sdk.js",
+    "./durable": "./src/durable.js",
+    "./platform": "./src/platform.js",
+    "./workflows": "./src/workflow-runner.js",
+    "./knowledge": "./src/knowledge.js",
+    "./evolution": "./src/evolution.js",
+    "./bridge": "./src/paperpilot-bridge.js",
+    "./stores": "./src/sqlite-store.js",
+    "./branding": "./src/branding.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "example.config.json",
+    "themes",
+    "assets",
+    "redmaple.config.json"
+  ],
+  "bin": {
+    "agent-base": "./src/cli.js",
+    "redmaple": "./src/redmaple-cli.js"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 test/*.test.js",
+    "start": "node src/redmaple-cli.js",
+    "start:legacy": "node src/cli.js"
+  },
+  "dependencies": {
+    "@earendil-works/chord": "1.5.0",
+    "@earendil-works/pi-agent-core": "1.5.0",
+    "@earendil-works/pi-ai": "1.5.0",
+    "@earendil-works/pi-codemode": "1.5.0",
+    "@earendil-works/pi-coding-agent": "1.5.0",
+    "@earendil-works/pi-durable": "1.5.0",
+    "@earendil-works/pi-mcp": "1.5.0",
+    "@earendil-works/pi-tui": "1.5.0"
+  },
+  "devDependencies": {
+    "@xterm/headless": "6.0.0"
+  }
+}
